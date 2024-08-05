@@ -1,0 +1,269 @@
+/* Base Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Light grey background */
+    color: #333; /* Dark text color for readability */
+}
+
+/* Hidden Elements */
+.hidden {
+    display: none;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #d32f2f; /* Dark Red */
+    color: #fff;
+}
+
+/* Logo Styling */
+header img#logo {
+    width: 80px; /* Increase size as needed */
+    height: 80px; /* Maintain aspect ratio or adjust height */
+    border-radius: 50%; /* Makes the logo circular */
+    margin-right: 15px; /* Space between logo and title */
+    object-fit: cover; /* Ensures image fits well within the circle */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+
+/* Name Input Section */
+#name-input-section {
+    text-align: center;
+    padding: 20px;
+}
+
+#username {
+    padding: 10px;
+    font-size: 1.2rem;
+    border: 2px solid #d32f2f; /* Dark Red border */
+    border-radius: 5px;
+    outline: none;
+}
+
+#start-quiz-button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #d32f2f; /* Dark Red */
+    color: #fff;
+    border: 2px solid #b71c1c; /* Darker Red border */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+#start-quiz-button:hover {
+    background-color: #b71c1c; /* Darker Red */
+    border-color: #d32f2f; /* Dark Red border */
+}
+
+/* Quiz Section */
+#quiz-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.quiz-container {
+    background-color: #fff; /* White background for quiz container */
+    border: 2px solid #d32f2f; /* Dark Red border */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 100%;
+    max-width: 800px; /* Max width for better readability */
+    margin: 0 auto; /* Centering the container */
+}
+
+.question-number {
+    font-size: 1.8rem;
+    color: #d32f2f; /* Dark Red for question number */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.quiz-images {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.quiz-images img {
+    max-width: 180px; /* Increased size for visibility */
+    max-height: 180px; /* Increased size for visibility */
+    border: 2px solid #d32f2f; /* Dark Red border */
+    border-radius: 10px;
+    background-color: #fff; /* White background to distinguish */
+    transition: border-color 0.3s;
+}
+
+.quiz-images img:hover {
+    border-color: #b71c1c; /* Darker Red on hover */
+}
+
+#answer {
+    padding: 12px;
+    font-size: 1.2rem;
+    border: 2px solid #d32f2f; /* Dark Red border */
+    border-radius: 5px;
+    outline: none;
+    background-color: #fff; /* White background */
+    color: #d32f2f; /* Dark Red text */
+    margin-bottom: 20px;
+    width: calc(100% - 24px); /* Full width with padding adjustment */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#answer:focus {
+    border-color: #b71c1c; /* Darker Red on focus */
+    box-shadow: 0 0 5px rgba(211, 47, 47, 0.5); /* Subtle red shadow */
+}
+
+/* Feedback Styles */
+#feedback {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    display: none; /* Initially hidden, controlled via JS */
+}
+
+.feedback.correct {
+    color: #388e3c; /* Green for correct */
+    display: block; /* Make visible when correct */
+}
+
+.feedback.wrong {
+    color: #d32f2f; /* Red for wrong */
+    display: block; /* Make visible when wrong */
+}
+
+
+.correct-answer {
+    font-size: 1.1rem;
+    color: #d32f2f; /* Red for correct answer */
+    margin: 10px 0;
+}
+
+.action-button {
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    background-color: #d32f2f; /* Dark Red */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 20px;
+}
+
+.action-button:hover {
+    background-color: #b71c1c; /* Darker Red */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.timer {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    font-weight: bold;
+    color: #d32f2f; /* Dark Red for timer */
+}
+
+/* End Game Section */
+#end-section {
+    text-align: center;
+    padding: 20px;
+}
+
+/* QR Code Styling */
+#qr-code {
+    margin-top: 20px; /* Add margin to move QR code down */
+    margin-bottom: 20px; /* Optional: Add margin to create space below QR code */
+}
+
+#qr-code img {
+    max-width: 150px;
+    height: auto; /* Maintain aspect ratio */
+}
+#final-score, #final-time {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+#play-again-button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #d32f2f; /* Dark Red */
+    color: #fff;
+    border: 2px solid #b71c1c; /* Darker Red border */
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+#play-again-button:hover {
+    background-color: #b71c1c; /* Darker Red */
+    border-color: #d32f2f; /* Dark Red border */
+}
+
+/* Leaderboard */
+#leaderboard-container {
+    background-color: #fff; /* White background for leaderboard container */
+    border: 2px solid #d32f2f; /* Dark Red border */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    z-index: 1000;
+}
+
+#leaderboard-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #d32f2f; /* Dark Red for title */
+}
+
+#leaderboard-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#leaderboard-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+#leaderboard-list li:last-child {
+    border-bottom: none;
+}
+
+/* Timer */
+#timer {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}

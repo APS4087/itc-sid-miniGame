@@ -1,47 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Club SID</title>
-    <style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ITC_SID_Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <img id="logo" src="images/itclubLOGO.jpg" alt="Logo" />
+      <h1>Itc Mini Quiz Game</h1>
+    </header>
 
-    </style>
-</head>
-<body>
-    <main id="container">
+    <div class="container">
+      <div id="name-input-section">
+        <h2>Enter Your Name</h2>
+        <input type="text" id="username" placeholder="Enter your name" />
+        <button id="start-quiz-button">Start Quiz</button>
+      </div>
+      <div id="quiz-section" class="hidden">
+        <div class="quiz-container">
+          <div id="question-number" class="question-number">Question 1</div>
+          <div class="quiz-images">
+            <img id="image1" src="" alt="Quiz Image" />
+            <img id="image2" src="" alt="Quiz Image" />
+            <img id="image3" src="" alt="Quiz Image" />
+          </div>
+          <input type="text" id="answer" placeholder="Type your answer" />
+          <div id="feedback" class="feedback"></div>
+          <div id="correct-answer" class="correct-answer"></div>
+          <button id="next-button" class="action-button">Next Question</button>
+          <div id="timer" class="timer">
+            Time: <span id="timer-display">00:00</span>
+          </div>
+        </div>
+      </div>
 
-    </main>
-    <script>
-        const container = document.getElementById("container");
+      <div id="end-section" class="hidden">
+        <h2>Game Over</h2>
+        <div id="final-score"></div>
+        <div id="final-time"></div>
+        <button id="play-again-button">Play Again</button>
+        <br />
+        <div id="qr-code">
+          <!-- QR code image linking to your Instagram -->
+          <img
+            src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.instagram.com/simitclub/"
+            alt="QR Code"
+          />
+        </div>
+      </div>
+    </div>
 
-        const formEl = form();
-        let name = null;
+    <div id="leaderboard-container">
+      <h2 id="leaderboard-title">Leaderboard</h2>
+      <ul id="leaderboard-list"></ul>
+    </div>
 
-        container.appendChild(formEl);
-
-        function form() {
-            const formEl = document.createElement("form");
-            const inputEl = document.createElement("input");
-            const submitBtn = document.createElement("button");
-            submitBtn.addEventListener("click", (e) => {
-                e.preventDefault();
-
-                name = inputEl.value ?? null;
-                console.log(name)
-            })
-
-            inputEl.placeholder = "Enter your name";
-
-            formEl.appendChild(inputEl);
-            formEl.appendChild(submitBtn);
-
-            return formEl
-        }
-
-        function game() {
-
-        }
-    </script>
-</body>
+    <script type="module" src="scripts.js"></script>
+  </body>
 </html>
