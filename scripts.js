@@ -272,3 +272,29 @@ loadLeaderboard();
 function reloadPage() {
   location.reload();
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const leaderboardList = document.getElementById("leaderboard-list");
+  let scrollAmount = 0;
+  let scrollHeight = leaderboardList.scrollHeight;
+
+  function scrollLeaderboard() {
+    scrollAmount++;
+    if (scrollAmount >= scrollHeight - leaderboardList.clientHeight) {
+      scrollAmount = 0;
+    }
+    leaderboardList.scrollTop = scrollAmount;
+  }
+
+  setInterval(scrollLeaderboard, 50); // Adjust the speed of scrolling
+
+  // Update scrollHeight when the leaderboard is updated
+  const observer = new MutationObserver(() => {
+    scrollHeight = leaderboardList.scrollHeight;
+  });
+
+  observer.observe(leaderboardList, {
+    childList: true,
+    subtree: true,
+  });
+});
