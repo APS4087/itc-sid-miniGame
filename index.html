@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Club SID</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <main id="container">
+
+    </main>
+    <script>
+        const container = document.getElementById("container");
+
+        const formEl = form();
+        let name = null;
+
+        container.appendChild(formEl);
+
+        function form() {
+            const formEl = document.createElement("form");
+            const inputEl = document.createElement("input");
+            const submitBtn = document.createElement("button");
+            submitBtn.addEventListener("click", (e) => {
+                e.preventDefault();
+
+                name = inputEl.value ?? null;
+                console.log(name)
+            })
+
+            inputEl.placeholder = "Enter your name";
+
+            formEl.appendChild(inputEl);
+            formEl.appendChild(submitBtn);
+
+            return formEl
+        }
+
+        function game() {
+
+        }
+    </script>
+</body>
+</html>
