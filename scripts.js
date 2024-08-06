@@ -157,7 +157,7 @@ function loadQuestion() {
 }
 
 function submitAnswer() {
-  const answer = document.getElementById("answer").value.trim();
+  const answer = document.getElementById("answer").value.trim().toLowerCase();
   const correctAnswer = questions[currentQuestionIndex].answer;
 
   const feedbackElement = document.getElementById("feedback");
