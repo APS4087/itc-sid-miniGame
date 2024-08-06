@@ -27,44 +27,28 @@ const db = getFirestore(app);
 // Quiz Data
 const questions = [
   {
-    images: [
-      "images/testPic.jpeg",
-      "images/testPic.jpeg",
-      "images/testPic.jpeg",
-    ],
-    answer: "answer1",
+    images: ["images/java1.jpg", "images/java2.jpg", "images/java3.jpg"],
+    answer: "java",
+  },
+  {
+    images: ["images/python1.jpg", "images/python2.jpg", "images/python3.jpg"],
+    answer: "python",
+  },
+  {
+    images: ["images/c1.jpg", "images/c2.jpg", "images/c3.jpg"],
+    answer: "c",
   },
   {
     images: [
-      "images/testPic.jpeg",
-      "images/testPic.jpeg",
-      "images/testPic.jpeg",
+      "images/pytorch1.jpg",
+      "images/pytorch2.jpg",
+      "images/pytorch3.jpg",
     ],
-    answer: "answer2",
+    answer: "pytorch",
   },
   {
-    images: [
-      "images/testPic.jpeg",
-      "images/testPic.jpeg",
-      "images/testPic.jpeg",
-    ],
-    answer: "answer3",
-  },
-  {
-    images: [
-      "images/testPic.jpeg",
-      "images/testPic.jpeg",
-      "images/testPic.jpeg",
-    ],
-    answer: "answer4",
-  },
-  {
-    images: [
-      "images/testPic.jpeg",
-      "images/testPic.jpeg",
-      "images/testPic.jpeg",
-    ],
-    answer: "answer5",
+    images: ["images/c3.jpg", "images/itc2.jpg", "images/c2.jpg"],
+    answer: "itc",
   },
 ];
 
@@ -79,6 +63,7 @@ document.getElementById("start-quiz-button").addEventListener("click", () => {
   console.log("Start button clicked");
   startQuiz();
 });
+
 document.getElementById("next-button").addEventListener("click", submitAnswer);
 document
   .getElementById("play-again-button")
