@@ -29,14 +29,17 @@ const questions = [
   {
     images: ["images/java1.jpg", "images/java2.jpg", "images/java3.jpg"],
     answer: "java",
+    placeholder: "What is this programming language?",
   },
   {
     images: ["images/python1.jpg", "images/python2.jpg", "images/python3.jpg"],
     answer: "python",
+    placeholder: "What is this programming language?",
   },
   {
-    images: ["images/c1.jpg", "images/c2.jpg", "images/c3.jpg"],
-    answer: "c",
+    images: ["images/c2.jpg", "images/c++.jpg", "images/c++.jpg"],
+    answer: "c++",
+    placeholder: "What is this programming language?",
   },
   {
     images: [
@@ -45,10 +48,12 @@ const questions = [
       "images/pytorch3.jpg",
     ],
     answer: "pytorch",
+    placeholder: "What is this programming language?",
   },
   {
     images: ["images/c3.jpg", "images/itc2.jpg", "images/c2.jpg"],
     answer: "itc",
+    placeholder: "What Club is this?",
   },
 ];
 
@@ -151,6 +156,7 @@ function loadQuestion() {
     questionNumber.innerText = `Question ${currentQuestionIndex + 1} of ${
       questions.length
     }`;
+    answerInput.placeholder = question.placeholder; // Set placeholder
   } else {
     console.log("Some elements are missing.");
   }
@@ -191,7 +197,7 @@ function submitAnswer() {
     feedbackElement.style.display = "none"; // Ensure feedback is hidden
     correctAnswerElement.classList.add("hidden"); // Ensure correct answer is hidden
     loadQuestion();
-  }, 1000); // Load next question after 2 seconds
+  }, 1000); // Load next question after 1 second
 }
 
 function endGame() {
