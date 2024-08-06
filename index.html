@@ -15,7 +15,12 @@
     <div class="container">
       <div id="name-input-section">
         <h2>Enter Your Name</h2>
-        <input type="text" id="username" placeholder="Enter your name" />
+        <input
+          type="text"
+          id="username"
+          placeholder="Enter your name"
+          autocomplete="off"
+        />
         <button id="start-quiz-button">Start Quiz</button>
       </div>
       <div id="quiz-section" class="hidden">
@@ -30,6 +35,7 @@
             type="text"
             id="answer"
             placeholder="What is this programming language?"
+            autocomplete="off"
           />
           <div id="feedback" class="feedback"></div>
           <div id="correct-answer" class="correct-answer"></div>
